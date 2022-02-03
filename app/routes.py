@@ -15,7 +15,16 @@ def home():
     return "Welcome home!"
 
 
-@app.route("/about", methods=["GET"])
-def about():
-    return "Hi, my name is Miguel Renteria."
+@app.route("/about")
+def about_me():
+    me = {
+        "first_name": "Miguel",
+        "last_name": "Renteria",
+        "hobbies": "Crossfit",
+        "active": True,
+        "lists": [1,2,3],
+
+    }    
+    return me 
+
 
